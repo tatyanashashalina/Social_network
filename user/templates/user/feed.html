@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block additional_css_files %}
+    <link rel="stylesheet" href="{% static 'user/css/feed.css' %}">
+{% endblock additional_css_files %}
+
+{% block script %}
+    <script src="{% static 'user/js/feed.js' %}" type="text/javascript"></script>
+{% endblock script %}
+
+{% block content %}
+    <div class="subscriptions_posts_container"></div>
+{% endblock content %}

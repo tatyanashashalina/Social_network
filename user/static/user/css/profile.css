@@ -1,0 +1,65 @@
+.container_username_and_btn {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.username {
+    padding: 10px 30px;
+}
+
+button {
+    cursor: pointer;
+    border: 2px solid #000;
+    padding: 10px 40px;
+}
+
+.container_number_of_posts {
+    padding: 10px 30px;
+}
+
+.container_post {
+    position: relative;
+    margin-top: 50px;
+    width: 99.5%;
+    border: 2px solid #000;
+}
+
+.container_title {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+  font-weight: bold;
+}
+.text_content{
+  padding: 8px;
+}
+
+.container_image {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container_link {
+    font-size: 90%;
+    text-align: right;
+}
+
+.container_edited {
+    color: gray;
+    font-size: 80%;
+    text-align: right;
+}
+
+.container_buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.btn_delete {
+    background-color: #D3392E;
+}

@@ -1,0 +1,16 @@
+{% extends '..\templates\base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <h2>Log In</h2>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username..." class="form-control">
+        <input type="password" name="password" placeholder="Password..." class="form-control" >
+        <button type="submit">Log In</button>
+    </form>
+    {% for message in messages %}
+        <p id="messages">{{message}}</p>
+    {% endfor %}
+{% endblock %}

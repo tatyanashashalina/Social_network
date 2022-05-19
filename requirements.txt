@@ -1,0 +1,11 @@
+django==4.0
+djangorestframework
+channels
+psycopg2
+pre-commit
+python-dotenv
+django-crispy-forms
+django-extensions
+django-cleanup
+pillow
+

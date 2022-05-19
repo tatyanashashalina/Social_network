@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Profile{% endblock %}
+
+{% block additional_css_files %}
+    <link rel="stylesheet" type="text/css" href="{% static 'user/css/profile.css'%}">
+{% endblock %}
+
+{% block body_onload %}getUserPosts({{ user.id }}, addPosts2Page, {{ is_other_profile|lower }}){% endblock %}
+
+{% block content %}
+
+    <div class="container_username_and_btn" id="block_username_btn">
+        <p class="username">{{ user.first_name }} {{ user.last_name }}       [{{ user.username }}]</p>
+        {% if is_other_profile %}
+            <button id="btn_action" onclick="subAction({{ user.id }}, changeSubButton)"
+                    value="{{ btn_type }}">
+                {{ btn_label }}
+            </button>
+        {% else %}
+            <button id="btn_action" onclick="callbackProfileButton({{ user.id }})" value="{{ btn_type }}">
+                {{ btn_label }}
+            </button>
+        {% endif %}
+
+    </div>
+    <div class="container_number_of_posts">
+        <p id="amount_of_posts"></p>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'user/js/profile.js' %}"></script>
+{% endblock %}

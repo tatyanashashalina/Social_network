@@ -1,0 +1,12 @@
+{% extends '..\templates\base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <h3>Hi, {{ user.username }}! Sucsess! You are logged in!</h3>
+    {% else %}
+        <h3><p>You are not logged in...</p></h3>
+        <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+{% endblock %}
